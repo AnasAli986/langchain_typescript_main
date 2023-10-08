@@ -62,7 +62,9 @@ const chatPrompt = ChatPromptTemplate.fromMessages([
     ["human", humanText]
 ])
 
-const model = new ChatOpenAI({});
+const model = new ChatOpenAI({
+    openAIApiKey: process.env.OPENAI_API_KEY
+});
 const parser = new CommaSeparatedListOutputParser();
 
 // Yo whats going on here

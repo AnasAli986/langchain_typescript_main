@@ -26,7 +26,14 @@ const output_splitter = await splitter.splitDocuments(docs);
 // Create vector store
 // const vectorStore = await MemoryVectorStore.fromDocuments(output_splitter, new OpenAIEmbeddings)
 const pinecone = new Pinecone();
-const pineconeIndex = pinecone.Index("practice-1");
+
+let pineconeIndex: any; 
+
+// Assert or guard from being undefined 
+if(process.env.PINECONE_INDEX) {
+    pineconeIndex = pinecone.Index(process.env.PINECONE_INDEX)
+}
+
 await PineconeStore.fromDocuments(docs, new OpenAIEmbeddings(), {
     pineconeIndex,
 });
