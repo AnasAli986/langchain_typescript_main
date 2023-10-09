@@ -8,10 +8,10 @@ dotenv.config()
  * To set it up follow the instructions on https://database.guide/2-sample-databases-sqlite/, placing the .db file
  * in the examples folder.
  */
-const db_name= "Employee"
-const db_user= "mladmin"
-const db_password= "mlangles"
-const db_host= "54.196.58.2:3306"
+const db_name= ""
+const db_user= ""
+const db_password= ""
+const db_host= ""
 
 export const run = async () => {
   const datasource = new DataSource({

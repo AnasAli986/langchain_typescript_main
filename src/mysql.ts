@@ -16,9 +16,9 @@ Please provide the query that you are running.
 The question: {question}`
 
 const db_name= "Employee"
-const db_user= "mladmin"
-const db_password= "mlangles"
-const db_host= "54.196.58.2:3306"
+const db_user= ""
+const db_password= ""
+const db_host= ""
 
 const run = async () => {
     const datasource = await new DataSource({
